@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Change-background-color</title>
+    </head>
+    <body>
+        <div>
+        <h1>Change background color</h1>
+        <p>When you click the colors it changes the background color.</p>
+            <div>
+                <button type="button" id="red" onclick="backgroundColor('red')">red</button>
+                <button type="button" id="blue" onclick="backgroundColor('blue')">blue</button>
+                <button type="button" id="green" onclick="backgroundColor('green')">green</button>
+            </div>
+            <div>
+        <p id="color">Colour, or color, is a property of light as seen by people. 
+            The international spelling of the word is colour, the word color is used in American English. 
+            “Primary colours” can be mixed to make the other colours. Red, yellow, and blue are the three traditional primary colours. 
+            The primary colours for television screens and computer monitors are red, green, and blue. 
+            Printers use magenta, yellow, and cyan as their primary colours.They also use black.
+        </p>
+    </div>
+    <div>
+        <button type="button" class="red">red</button>
+        <button type="button" class="orange">orange</button>
+        <button type="button" class="pink">pink</button>
+    </div>
+        </div>
+    </body>
+</html>
+<script>
+    function backgroundColor(color) {
+        document.body.style.background = color;  
+    }
+    const orange = document.getElementsByClassName("orange");
+    const color = document.getElementById("color");
+    orange.onclick = () => {
+        color.innerText = color.innerText.style.textDecorationColor;
+    }
+
+</script>
