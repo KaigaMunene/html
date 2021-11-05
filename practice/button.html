@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Button-clicking-site</title>
+    </head>
+    <body>
+        <h1></h1>
+        <p>When you click the "+" button it adds 1, when you click the "-" button it subtracts 1 </p>
+        <div>
+            <button type="button" id="add">+</button>
+            <p id="counter">0</p>  
+            <button type="button" id="subtract">-</button>
+        </div>
+         
+    </body>
+    <script>
+        const addition = document.getElementById("add")
+        const counter = document.getElementById("counter")
+        const subtraction = document.getElementById("subtract")
+
+        addition.onclick = () => {
+            counter.innerText = Number(counter.innerText) + 1
+        }
+
+        subtraction.addEventListener("click", () => {
+            //console.log(counter.innerText - 1)
+            
+            if (counter.innerText > 0){
+                counter.innerText = counter.innerText - 1
+            }
+        })    
+        
+    </script>
+</html>
